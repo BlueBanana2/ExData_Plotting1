@@ -5,6 +5,6 @@ y$datetime<-strptime(datetime,"%d/%m/%Y %H:%M:%s")
 y$Date<-as.Date(y$Date,"%d/%m/%Y")
 y<-y[which(y$Date>="2007-02-01" & y$Date<="2007-02-02"),]
 
-png(file="plot2.png")
+png(file="plot2.png", width=480, height=480)
 plot(y$datetime,y$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="")
 dev.off()
